@@ -4,10 +4,12 @@ import CardList from '../Components/CardList';
 import SearchBox from '../Components/SearchBox';
 import Scroll from '../Components/Scroll'
 import ErrorBoundary from '../Components/ErrorBoundary'
+import Header from '../Components/Header';
 
 import { setSearchField, requestRobots } from '../actions';
 
 import './App.css'
+
 
 
 const mapStateToProps = (state) => {
@@ -46,7 +48,7 @@ class App extends Component {
         : 
             (
                 <div className='tc'>
-                    <h1 className='f1'>Robo Friends</h1>
+                    <Header/>
                     <SearchBox searchChange={onSearchChange}/>
                     <Scroll>
                         < ErrorBoundary>
